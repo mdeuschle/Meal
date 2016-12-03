@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A864D0F11DF38DBE00E2BD0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864D0F01DF38DBE00E2BD0C /* AppDelegate.swift */; };
-		A864D0F31DF38DBE00E2BD0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864D0F21DF38DBE00E2BD0C /* ViewController.swift */; };
 		A864D0F61DF38DBE00E2BD0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A864D0F41DF38DBE00E2BD0C /* Main.storyboard */; };
 		A864D0F81DF38DBE00E2BD0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A864D0F71DF38DBE00E2BD0C /* Assets.xcassets */; };
 		A864D0FB1DF38DBE00E2BD0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A864D0F91DF38DBE00E2BD0C /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		A864D0ED1DF38DBE00E2BD0C /* Meals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A864D0F01DF38DBE00E2BD0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A864D0F21DF38DBE00E2BD0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A864D0F51DF38DBE00E2BD0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A864D0F71DF38DBE00E2BD0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A864D0FA1DF38DBE00E2BD0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +52,37 @@
 		A864D0EF1DF38DBE00E2BD0C /* Meals */ = {
 			isa = PBXGroup;
 			children = (
+				A864D1031DF38EE200E2BD0C /* Models */,
+				A864D1041DF38EEB00E2BD0C /* Views */,
+				A864D1021DF38ED100E2BD0C /* Controllers */,
 				A864D0F01DF38DBE00E2BD0C /* AppDelegate.swift */,
-				A864D0F21DF38DBE00E2BD0C /* ViewController.swift */,
-				A864D0F41DF38DBE00E2BD0C /* Main.storyboard */,
 				A864D0F71DF38DBE00E2BD0C /* Assets.xcassets */,
 				A864D0F91DF38DBE00E2BD0C /* LaunchScreen.storyboard */,
 				A864D0FC1DF38DBE00E2BD0C /* Info.plist */,
 			);
 			path = Meals;
+			sourceTree = "<group>";
+		};
+		A864D1021DF38ED100E2BD0C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A864D1031DF38EE200E2BD0C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A864D1041DF38EEB00E2BD0C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A864D0F41DF38DBE00E2BD0C /* Main.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +117,7 @@
 				TargetAttributes = {
 					A864D0EC1DF38DBE00E2BD0C = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3DKZWJ5854;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,7 +158,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A864D0F31DF38DBE00E2BD0C /* ViewController.swift in Sources */,
 				A864D0F11DF38DBE00E2BD0C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +281,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3DKZWJ5854;
 				INFOPLIST_FILE = Meals/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mattdeuschle.Meals;
@@ -272,6 +294,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3DKZWJ5854;
 				INFOPLIST_FILE = Meals/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mattdeuschle.Meals;
