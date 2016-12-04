@@ -12,6 +12,7 @@ class Meal {
 
     var name: String
     var happiness: Int
+    var items = [Item]()
 
     init(name: String, happiness: Int) {
         self.name = name

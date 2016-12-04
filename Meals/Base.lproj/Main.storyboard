@@ -33,19 +33,22 @@
                             <outlet property="delegate" destination="U6l-Na-2JD" id="Nvx-77-KJz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="XY9-2z-Lkj"/>
-                    <connections>
-                        <segue destination="3fp-ct-Xjo" kind="show" identifier="addMealSegue" id="o0V-yz-xJq"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="XY9-2z-Lkj">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="uTs-Nz-Kew">
+                            <connections>
+                                <segue destination="3fp-ct-Xjo" kind="show" identifier="addSegue" id="GGi-a9-AsI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oY2-ay-VyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="450" y="-242"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Meal View Controller-->
         <scene sceneID="T5W-tK-qKJ">
             <objects>
-                <viewController id="3fp-ct-Xjo" sceneMemberID="viewController">
+                <viewController id="3fp-ct-Xjo" customClass="AddMealViewController" customModule="Meals" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gDd-Gw-dQh"/>
                         <viewControllerLayoutGuide type="bottom" id="JJ4-4Q-ZJ7"/>
@@ -91,7 +94,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Wka-Ev-btr"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addButtonTapped:" destination="3fp-ct-Xjo" eventType="touchUpInside" id="1fy-Wp-7cT"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ItV-Wg-8CD">
                                 <rect key="frame" x="16" y="186" width="343" height="461"/>
@@ -133,6 +139,11 @@
                             <constraint firstItem="ItV-Wg-8CD" firstAttribute="top" secondItem="5dR-X5-Q2h" secondAttribute="bottom" constant="8" id="xaL-3J-Eqx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addHappinessTextField" destination="nm3-Va-QpY" id="omR-tc-mIP"/>
+                        <outlet property="addMealTextField" destination="XDz-pq-XCg" id="aqe-hW-YhX"/>
+                        <outlet property="itemTableView" destination="ItV-Wg-8CD" id="ahj-GA-Pkg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jud-1k-WkS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
