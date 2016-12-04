@@ -8,7 +8,8 @@
 
 import UIKit
 
-class MealTableViewController: UITableViewController {
+
+class MealTableViewController: UITableViewController, AddMealDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,19 @@ class MealTableViewController: UITableViewController {
                  Meal(name: "Porterhouse Steak", happiness: 9),
                  Meal(name: "Toast", happiness: 5)
     ]
+
+    func addMeal(meal: Meal) {
+        meals.append(meal)
+        tableView.reloadData()
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addMealSegue" {
+            if let dvc = segue.destination as? AddMealViewController {
+                dvc.addMealDelegate = self
+            }
+        }
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return meals.count

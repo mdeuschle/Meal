@@ -36,7 +36,7 @@
                     <navigationItem key="navigationItem" id="XY9-2z-Lkj">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="uTs-Nz-Kew">
                             <connections>
-                                <segue destination="3fp-ct-Xjo" kind="show" identifier="addSegue" id="GGi-a9-AsI"/>
+                                <segue destination="3fp-ct-Xjo" kind="show" identifier="addMealSegue" id="GGi-a9-AsI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
