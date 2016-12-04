@@ -11,6 +11,8 @@
 		A864D0F61DF38DBE00E2BD0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A864D0F41DF38DBE00E2BD0C /* Main.storyboard */; };
 		A864D0F81DF38DBE00E2BD0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A864D0F71DF38DBE00E2BD0C /* Assets.xcassets */; };
 		A864D0FB1DF38DBE00E2BD0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A864D0F91DF38DBE00E2BD0C /* LaunchScreen.storyboard */; };
+		A864D1061DF3BB1C00E2BD0C /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864D1051DF3BB1C00E2BD0C /* Meal.swift */; };
+		A864D1081DF3BB5700E2BD0C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864D1071DF3BB5700E2BD0C /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		A864D0F71DF38DBE00E2BD0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A864D0FA1DF38DBE00E2BD0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A864D0FC1DF38DBE00E2BD0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A864D1051DF3BB1C00E2BD0C /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		A864D1071DF3BB5700E2BD0C /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 		A864D1031DF38EE200E2BD0C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A864D1051DF3BB1C00E2BD0C /* Meal.swift */,
+				A864D1071DF3BB5700E2BD0C /* Item.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -158,6 +164,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A864D1061DF3BB1C00E2BD0C /* Meal.swift in Sources */,
+				A864D1081DF3BB5700E2BD0C /* Item.swift in Sources */,
 				A864D0F11DF38DBE00E2BD0C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
