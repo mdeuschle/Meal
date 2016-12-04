@@ -23,6 +23,9 @@ class AddMealViewController: UIViewController, UITableViewDelegate, UITableViewD
                  Item(name: "Peppers", calories: 4)
     ]
 
+    var selectedItems = [Item]()
+
+
     var addMealDelegate: AddMealDelegate?
 
     override func viewDidLoad() {
@@ -45,7 +48,16 @@ class AddMealViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) {
-            cell.accessoryType = .checkmark
+            let item = items[indexPath.row]
+            if cell.accessoryType == .none {
+                selectedItems.append(item)
+                cell.accessoryType = .checkmark
+            } else {
+                cell.accessoryType = .none
+                if let position = selectedItems.index(of: item) {
+                    selectedItems.remove(at: position)
+                }
+            }
         }
     }
 
@@ -55,6 +67,8 @@ class AddMealViewController: UIViewController, UITableViewDelegate, UITableViewD
             if let happinessInt = Int(mealHappiness) {
                 let meal = Meal(name: mealName, happiness: happinessInt)
                 delegate.addMeal(meal: meal)
+                meal.items = selectedItems
+                print("Meal \(meal.name) \(meal.happiness) \(meal.items)")
             }
         }
 

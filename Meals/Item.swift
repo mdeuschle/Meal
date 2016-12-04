@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 class Item: Equatable {
 
     var name: String
@@ -21,6 +20,6 @@ class Item: Equatable {
 }
 
 func ==(first: Item, second: Item) -> Bool {
-
-    return first.name == second.name && first.calories == second.calories
+    let result = first.name == second.name && first.calories == second.calories
+    return result
 }
