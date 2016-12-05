@@ -12,7 +12,7 @@ protocol AddMealDelegate {
     func addMeal(meal: Meal)
 }
 
-class AddMealViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AddMealViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddNewItemDelegate {
 
     @IBOutlet var addMealTextField: UITextField!
     @IBOutlet var addHappinessTextField: UITextField!
@@ -32,6 +32,10 @@ class AddMealViewController: UIViewController, UITableViewDelegate, UITableViewD
         stylizeNewItemButton()
     }
 
+    func addItem(item: Item) {
+        items.append(item)
+    }
+
     func stylizeNewItemButton() {
         let newItemButton = UIBarButtonItem(title: "New Item",
                                             style: .plain,
@@ -43,6 +47,7 @@ class AddMealViewController: UIViewController, UITableViewDelegate, UITableViewD
     func newItemButtonTapped() {
 
         let dvc = NewItemViewController(nibName: "NewItemViewController", bundle: nil)
+        dvc.addItemDelegate = self
         if let navigation = navigationController {
             navigation.pushViewController(dvc, animated: true)
         }
