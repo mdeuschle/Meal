@@ -46,7 +46,7 @@ class AddMealViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     func newItemButtonTapped() {
 
-        let dvc = NewItemViewController(nibName: "NewItemViewController", bundle: nil)
+        let dvc = NewItemViewController(delegate: self)
         dvc.addItemDelegate = self
         if let navigation = navigationController {
             navigation.pushViewController(dvc, animated: true)

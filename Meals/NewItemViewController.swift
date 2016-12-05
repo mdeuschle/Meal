@@ -20,6 +20,15 @@ class NewItemViewController: UIViewController {
 
     var addItemDelegate: AddNewItemDelegate?
 
+    init(delegate: AddNewItemDelegate) {
+        self.addItemDelegate = delegate
+        super.init(nibName: "NewItemViewController", bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
