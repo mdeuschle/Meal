@@ -13,7 +13,6 @@ class MealTableViewController: UITableViewController, AddMealDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     var meals = [Meal(name: "Pizza", happiness: 9),

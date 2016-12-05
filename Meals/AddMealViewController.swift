@@ -25,11 +25,26 @@ class AddMealViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     var selectedItems = [Item]()
 
-
     var addMealDelegate: AddMealDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        stylizeNewItemButton()
+    }
+
+    func stylizeNewItemButton() {
+        let newItemButton = UIBarButtonItem(title: "New Item",
+                                            style: .plain,
+                                            target: self,
+                                            action: #selector(AddMealViewController.newItemButtonTapped))
+        navigationItem.rightBarButtonItem = newItemButton
+    }
+
+    func newItemButtonTapped() {
+        let dvc = NewItemViewController(nibName: "NewItemViewController", bundle: nil)
+        if let navigation = navigationController {
+            navigation.pushViewController(dvc, animated: true)
+        }
 
     }
 
