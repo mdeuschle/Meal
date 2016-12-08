@@ -44,8 +44,28 @@ class MealTableViewController: UITableViewController, AddMealDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "mealCell") else {
             return UITableViewCell()
         }
-
+        let longPress = UILongPressGestureRecognizer(target: self,
+                                                     action: #selector(MealTableViewController.showDetail(recognizer:)))
         cell.textLabel?.text = meal.name
+        cell.addGestureRecognizer(longPress)
         return cell
     }
+
+    func showDetail(recognizer: UILongPressGestureRecognizer) {
+        if recognizer.state == .began {
+            if let cell = recognizer.view as? UITableViewCell {
+                if let index = tableView.indexPath(for: cell) {
+                    let meal = meals[index.row]
+                    print("\(meal.name) \(meal.happiness)")
+                }
+            }
+
+        }
+    }
+
+
+
+
+
+
 }
