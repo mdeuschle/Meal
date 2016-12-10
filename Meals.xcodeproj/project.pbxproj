@@ -17,6 +17,7 @@
 		A864D10C1DF3C24200E2BD0C /* AddMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864D10B1DF3C24200E2BD0C /* AddMealViewController.swift */; };
 		A864D10F1DF502CA00E2BD0C /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864D10D1DF502CA00E2BD0C /* NewItemViewController.swift */; };
 		A864D1101DF502CA00E2BD0C /* NewItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A864D10E1DF502CA00E2BD0C /* NewItemViewController.xib */; };
+		A8AEA5961DFCA343000A5E73 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AEA5951DFCA343000A5E73 /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		A864D10B1DF3C24200E2BD0C /* AddMealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMealViewController.swift; sourceTree = "<group>"; };
 		A864D10D1DF502CA00E2BD0C /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
 		A864D10E1DF502CA00E2BD0C /* NewItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewItemViewController.xib; sourceTree = "<group>"; };
+		A8AEA5951DFCA343000A5E73 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +80,8 @@
 		A864D1021DF38ED100E2BD0C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A864D1091DF3BD0A00E2BD0C /* MealTableViewController.swift */,
 				A864D10B1DF3C24200E2BD0C /* AddMealViewController.swift */,
+				A864D1091DF3BD0A00E2BD0C /* MealTableViewController.swift */,
 				A864D10D1DF502CA00E2BD0C /* NewItemViewController.swift */,
 			);
 			name = Controllers;
@@ -88,8 +90,8 @@
 		A864D1031DF38EE200E2BD0C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A864D1051DF3BB1C00E2BD0C /* Meal.swift */,
 				A864D1071DF3BB5700E2BD0C /* Item.swift */,
+				A864D1051DF3BB1C00E2BD0C /* Meal.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -97,6 +99,7 @@
 		A864D1041DF38EEB00E2BD0C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A8AEA5951DFCA343000A5E73 /* Alert.swift */,
 				A864D0F41DF38DBE00E2BD0C /* Main.storyboard */,
 				A864D10E1DF502CA00E2BD0C /* NewItemViewController.xib */,
 			);
@@ -183,6 +186,7 @@
 				A864D10C1DF3C24200E2BD0C /* AddMealViewController.swift in Sources */,
 				A864D10A1DF3BD0A00E2BD0C /* MealTableViewController.swift in Sources */,
 				A864D0F11DF38DBE00E2BD0C /* AppDelegate.swift in Sources */,
+				A8AEA5961DFCA343000A5E73 /* Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +350,7 @@
 				A864D1011DF38DBE00E2BD0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

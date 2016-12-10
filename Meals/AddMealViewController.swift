@@ -37,16 +37,7 @@ class AddMealViewController: UIViewController, UITableViewDelegate, UITableViewD
         if let tableView = itemTableView {
             tableView.reloadData()
         } else {
-            let alertController = UIAlertController(title: "Alert",
-                                                    message: "Error: Item was added",
-                                                    preferredStyle: .alert)
-            let alertAction = UIAlertAction(title: "OK",
-                                            style: .cancel,
-                                            handler: nil)
-            alertController.addAction(alertAction)
-            present(alertController,
-                    animated: true,
-                    completion: nil)
+            Alert(controller: self).showAlert(message: "Error, but new item added")
         }
     }
 
@@ -64,9 +55,9 @@ class AddMealViewController: UIViewController, UITableViewDelegate, UITableViewD
         dvc.addItemDelegate = self
         if let navigation = navigationController {
             navigation.pushViewController(dvc, animated: true)
+        } else {
+            Alert(controller: self).showAlert()
         }
-
-
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -92,8 +83,12 @@ class AddMealViewController: UIViewController, UITableViewDelegate, UITableViewD
                 cell.accessoryType = .none
                 if let position = selectedItems.index(of: item) {
                     selectedItems.remove(at: position)
+                } else {
+                    Alert(controller: self).showAlert()
                 }
             }
+        } else {
+            Alert(controller: self).showAlert()
         }
     }
 
