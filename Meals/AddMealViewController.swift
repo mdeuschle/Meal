@@ -16,7 +16,7 @@ class AddMealViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     @IBOutlet var addMealTextField: UITextField!
     @IBOutlet var addHappinessTextField: UITextField!
-    @IBOutlet var itemTableView: UITableView!
+    @IBOutlet var itemTableView: UITableView?
 
     var items = [Item(name: "Mustard", calories: 6),
                  Item(name: "Mayo", calories: 20),
@@ -34,6 +34,20 @@ class AddMealViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     func addItem(item: Item) {
         items.append(item)
+        if let tableView = itemTableView {
+            tableView.reloadData()
+        } else {
+            let alertController = UIAlertController(title: "Alert",
+                                                    message: "Error: Item was added",
+                                                    preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "OK",
+                                            style: .cancel,
+                                            handler: nil)
+            alertController.addAction(alertAction)
+            present(alertController,
+                    animated: true,
+                    completion: nil)
+        }
     }
 
     func stylizeNewItemButton() {
