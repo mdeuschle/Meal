@@ -18,6 +18,7 @@
 		A864D10F1DF502CA00E2BD0C /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A864D10D1DF502CA00E2BD0C /* NewItemViewController.swift */; };
 		A864D1101DF502CA00E2BD0C /* NewItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A864D10E1DF502CA00E2BD0C /* NewItemViewController.xib */; };
 		A8AEA5961DFCA343000A5E73 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AEA5951DFCA343000A5E73 /* Alert.swift */; };
+		A8AEA5981DFCC6CA000A5E73 /* RemoveMealController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AEA5971DFCC6CA000A5E73 /* RemoveMealController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		A864D10D1DF502CA00E2BD0C /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
 		A864D10E1DF502CA00E2BD0C /* NewItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewItemViewController.xib; sourceTree = "<group>"; };
 		A8AEA5951DFCA343000A5E73 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		A8AEA5971DFCC6CA000A5E73 /* RemoveMealController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveMealController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				A8AEA5951DFCA343000A5E73 /* Alert.swift */,
 				A864D0F41DF38DBE00E2BD0C /* Main.storyboard */,
 				A864D10E1DF502CA00E2BD0C /* NewItemViewController.xib */,
+				A8AEA5971DFCC6CA000A5E73 /* RemoveMealController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				A864D10C1DF3C24200E2BD0C /* AddMealViewController.swift in Sources */,
 				A864D10A1DF3BD0A00E2BD0C /* MealTableViewController.swift in Sources */,
 				A864D0F11DF38DBE00E2BD0C /* AppDelegate.swift in Sources */,
+				A8AEA5981DFCC6CA000A5E73 /* RemoveMealController.swift in Sources */,
 				A8AEA5961DFCA343000A5E73 /* Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
