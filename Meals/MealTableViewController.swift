@@ -56,13 +56,23 @@ class MealTableViewController: UITableViewController, AddMealDelegate {
             if let cell = recognizer.view as? UITableViewCell {
                 if let indexPath = tableView.indexPath(for: cell) {
                     let meal = meals[indexPath.row]
+
+                    func removeMeal(action: UIAlertAction) {
+                        meals.remove(at: indexPath.row)
+                        tableView.reloadData()
+                    }
+
                     let alertController = UIAlertController(title: "\(meal.name)",
                         message: meal.details(),
                         preferredStyle: .alert)
-                    let alertAction = UIAlertAction(title: "OK",
+                    let removeAction = UIAlertAction(title: "Remove",
+                                                    style: .destructive,
+                                                    handler: removeMeal)
+                    alertController.addAction(removeAction)
+                    let cancelAction = UIAlertAction(title: "Cancel",
                                                     style: .cancel,
                                                     handler: nil)
-                    alertController.addAction(alertAction)
+                    alertController.addAction(cancelAction)
                     present(alertController,
                             animated: true,
                             completion: nil)
@@ -70,7 +80,6 @@ class MealTableViewController: UITableViewController, AddMealDelegate {
                 }
             }
         }
-
     }
 
 

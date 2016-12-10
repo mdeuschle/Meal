@@ -105,6 +105,8 @@ class AddMealViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         if let navigation = navigationController {
             navigation.popViewController(animated: true)
+        } else {
+            Alert(controller: self).showAlert(message: "Error, but meal added")
         }
     }
 }
