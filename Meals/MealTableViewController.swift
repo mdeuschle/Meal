@@ -57,17 +57,16 @@ class MealTableViewController: UITableViewController, AddMealDelegate {
                 if let indexPath = tableView.indexPath(for: cell) {
                     let meal = meals[indexPath.row]
 
-                    func removeMeal(action: UIAlertAction) {
-                        meals.remove(at: indexPath.row)
-                        tableView.reloadData()
-                    }
-
                     let alertController = UIAlertController(title: "\(meal.name)",
                         message: meal.details(),
                         preferredStyle: .alert)
                     let removeAction = UIAlertAction(title: "Remove",
-                                                    style: .destructive,
-                                                    handler: removeMeal)
+                                                     style: .destructive,
+                                                     handler: { alert in
+                                                        self.meals.remove(at: indexPath.row)
+                                                        self.tableView.reloadData()
+
+                    })
                     alertController.addAction(removeAction)
                     let cancelAction = UIAlertAction(title: "Cancel",
                                                     style: .cancel,
