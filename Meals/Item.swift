@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Item: Equatable {
+class Item : NSObject, NSCoding {
 
     var name: String
     var calories: Int
@@ -16,6 +16,16 @@ class Item: Equatable {
     init(name: String, calories: Int) {
         self.name = name
         self.calories = calories
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        self.name = aDecoder.decodeObject(forKey: "name") as! String
+        self.calories = aDecoder.decodeInteger(forKey: "calories")
+    }
+
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(name, forKey: "name")
+        aCoder.encode(calories, forKey: "calories")
     }
 }
 

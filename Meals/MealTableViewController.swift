@@ -11,20 +11,18 @@ import UIKit
 
 class MealTableViewController: UITableViewController, AddMealDelegate {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    var meals = [Meal(name: "Pizza", happiness: 9),
-                 Meal(name: "Hot Dogs", happiness: 8),
-                 Meal(name: "Breakfast Burritos", happiness: 9),
-                 Meal(name: "Porterhouse Steak", happiness: 9),
-                 Meal(name: "Toast", happiness: 5)
-    ]
+    var meals = [Meal]()
 
     func addMeal(meal: Meal) {
         meals.append(meal)
+        Dao().archiveMeals(meals: meals)
         tableView.reloadData()
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        meals = Dao().unArchiveMeals()
+
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

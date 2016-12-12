@@ -18,22 +18,19 @@ class AddMealViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet var addHappinessTextField: UITextField!
     @IBOutlet var itemTableView: UITableView?
 
-    var items = [Item(name: "Mustard", calories: 6),
-                 Item(name: "Mayo", calories: 20),
-                 Item(name: "Peppers", calories: 4)
-    ]
-
+    var items = [Item]()
     var selectedItems = [Item]()
-
     var addMealDelegate: AddMealDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        items = Dao().unArchiveItems()
         stylizeNewItemButton()
     }
 
     func addItem(item: Item) {
         items.append(item)
+        Dao().archiveItem(items: items)
         if let tableView = itemTableView {
             tableView.reloadData()
         } else {
